@@ -2,7 +2,6 @@ import random
 
 # author: Jette, Emily
 
-
 def create_network(file_name):
     '''
     (str)->list of tuples where each tuple has 2 elements (int, list of int) 
@@ -53,9 +52,7 @@ def user_friends(user,friends):
                 friend_list.append(int(friends[y][0]))
             friend_list.sort()
     return user,friend_list 
-    
-
-
+ 
 def getCommonFriends(user1, user2, network):
     '''
     (int, int, 2D list) ->list
@@ -78,8 +75,7 @@ def getCommonFriends(user1, user2, network):
             common.append(i)
     common.sort()
     return common
-
-    
+ 
 def recommend(user, network):
     '''
     (int, 2Dlist)->int or None
@@ -118,7 +114,6 @@ def recommend(user, network):
     return u_id
     pass
 
-
 def k_or_more_friends(network, k):
     '''
     (2Dlist,int)->int
@@ -135,7 +130,6 @@ def k_or_more_friends(network, k):
     return counter
     pass
  
-
 def maximum_num_friends(network):
     '''
     (2Dlist)->int
@@ -150,7 +144,6 @@ def maximum_num_friends(network):
             max_num = len(i[1])
     return max_num
     pass
-    
 
 def people_with_most_friends(network):
     '''
@@ -165,7 +158,6 @@ def people_with_most_friends(network):
             max_friends.append(i[0])   
     return max_friends
 
-
 def average_num_friends(network):
     '''
     (2Dlist)->number (int or float)
@@ -179,7 +171,6 @@ def average_num_friends(network):
     return avg  
     pass
     
-
 def knows_everyone(network):
     '''
     (2Dlist)->bool
@@ -190,7 +181,6 @@ def knows_everyone(network):
     
     return maximum_num_friends(network) == len(network)-1
     pass
-
 
 ####### CHATTING WITH USER CODE:
 
